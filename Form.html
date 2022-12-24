@@ -1,97 +1,78 @@
+<html>
+
+<head>
+    <title> Registration form </title>
+    <style>
+        body {
+            background-color: skyblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+
+    <head>
+
+    <body>
+        <h1>Form </h1>
+        <form id="myForm">
+            <table>
+                <tr>
+                    <td> Name </td>
+                    <td>
+                        <input type="text" placeholder=" Frist name" , id="firstName">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="text" placeholder="Last name" , id="lastName">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Gender </td>
+                    <td>
+                        <input type="radio" Name="gender">Male <input type="radio" Name="gender">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="check- button">
+                        <label>I agree </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Submit" onclick="takeValue()">
+                        <input type="button" value="reset" onclick="resetEverything()">
 
 
 
 
-<html> 
+                    </td>
+                </tr>
 
- <head> 
+            </table>
+        </form>
+        <br>
+        <br>
+        <hr>
+        <div id="myOutput"></div>
 
- <title> Registration form </title>
+        <script>
+            function takeValue() {
+                var fname = document.querySelector("#firstName").value;
+                console.log('First name captured = ' + fname);
+                document.querySelector("#myOutput").innerHTML = 'My name is '+fname;
+            }
 
- <head>
+            function resetEverything(){
+                document.querySelector("#myOutput").innerHTML = '';
+                document.querySelector("#myForm").reset();
+            }
+        </script>
+    </body>
 
- <body bgcolor="sky-blue"> </body>
-
- <h1 style=text-align:center>Form </h1>
-
- <form ">
-
- <table>
-
- <tr>
-
- <td>
-
- Name
-
-</td>
-
-<td>
-
-<input type="text"placeholder=" Frist name", id="Frist name">
-
-</td>
-
-</tr>
-
-<tr>
-
- <td>
-
-</td>
-
-<td>
-
-<input type="text"placeholder=" Last name" , id="last name">
-
-</td>
-
-</tr>
-
-<tr>
-
-<tr>
-
-<td>
-
-Gender
-
-</td>
-
-<td>
-
-<input type="radio"Name="gender">Male
-
-<input type="radio"Name="gender">Female 
-
-</td>
-
-</tr>
-
-<tr>
-
-<td>
-
-<input type="submit"value ="Submit">
-
-<input type="reset"value ="reset">
-
-<div class="arrow"></div>  
-
-<div  class="input-name">
-
-<input type="checkbox" class="check- button">
-
-<lavel>I agree  </label>
-
-</td>
-
-</tr>
-
- 
-
-    </form>
-
-    
-
-</html> 
+</html>
